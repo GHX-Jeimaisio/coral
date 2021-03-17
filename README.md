@@ -3,9 +3,10 @@
 Backend built in PHP Laravel.
 ### Requirements
 1. Composer
-2. NPM
+2. NPM & NodeJs
 3. PHP >= 7.2
 4. MySQL
+5. Apache/NginX
 
 ### Local machine setup ###
 1. Clone repo: https://github.com/GHX-Jeimaisio/coral-laravel
