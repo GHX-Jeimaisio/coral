@@ -56,6 +56,17 @@
     </div>
 
     <script type="text/javascript">
+        $('#submit').attr('disabled', 'disabled');
+        $('#email').on('keyup', function() {
+            let empty = $('#email').val();
+            if (empty) {
+                $('#submit').attr('disabled', false);
+            } else {
+                $('#submit').attr('disabled', 'disabled');
+                $('#error-message').html('');
+            }
+
+        });
         $('#submit').on('click', function (event){
             event.preventDefault();
             let email = $('#email').val();
@@ -72,6 +83,15 @@
                         $('#error-message').removeClass('valid').addClass('invalid')
                     } else {
                         $('#error-message').removeClass('invalid').addClass('valid')
+
+                        var win = window.open('http://www.coral.co.uk/register?email='+email, '_blank');
+                        if (win) {
+                            //Browser has allowed it to be opened
+                            win.focus();
+                        } else {
+                            //Browser has blocked it
+                            alert('Please allow popups for this website');
+                        }
                     }
                     $('#error-message').html(response.message);
                     console.log(response);

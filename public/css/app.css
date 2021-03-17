@@ -239,6 +239,7 @@ body .instruction .tri-section .circle {
   background-image: radial-gradient(#0098ea, #0062cd);
   color: #006ada;
   position: relative;
+  box-shadow: 0 0 15px #000;
 }
 
 body .instruction .tri-section .circle .number {
@@ -255,6 +256,7 @@ body .instruction .tri-section .c-text {
   text-transform: uppercase;
   font-size: 22px;
   font-family: "BreuerText-Bold";
+  padding-right: 5%;
 }
 
 body footer {
@@ -301,13 +303,17 @@ body .modal {
   background-color: rgba(0, 0, 0, 0.4);
   /* Black w/ opacity */
   font-family: "BreuerText";
-  font-size: 12px;
+  font-size: 14px;
 }
 
 body .modal-header {
   padding: 2px 16px;
-  background-color: #00244a;
-  color: white;
+  background-image: linear-gradient(#0062cd, #002346);
+  color: #fff;
+}
+
+body .modal-header h2 {
+  font-size: 18px;
 }
 
 body .modal-body {
@@ -320,7 +326,7 @@ body .modal-content {
   margin: auto;
   padding: 0;
   border: 1px solid #888;
-  width: 40%;
+  width: 35%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-animation-name: animatetop;
           animation-name: animatetop;
@@ -531,6 +537,14 @@ body .rotate {
     width: 65%;
   }
 
+  body .container .nco .text-wrapper .text-2 {
+    font-size: 30px;
+  }
+
+  body .container .nco .text-wrapper .text-2 span {
+    font-size: 50px;
+  }
+
   body .container .nco .text-wrapper .text-3 {
     margin-top: 8px;
   }
@@ -538,26 +552,41 @@ body .rotate {
 
 @media screen and (max-width: 450px) {
   body .container .nco .text-wrapper {
-    top: 45% !important;
+    top: 41% !important;
     width: 65% !important;
   }
 
-  body .container .nco .text-wrapper .text-1,
-  body .container .nco .text-wrapper .text-2 {
-    font-size: 14px !important;
+  body .container .nco form {
+    bottom: 9%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  body .container .nco .text-wrapper .text-1 {
+    font-size: 14px;
     line-height: 1;
   }
 
+  body .container .nco .text-wrapper .text-2 {
+    font-size: 30px;
+  }
+
   body .container .nco .text-wrapper .text-2 span {
-    font-size: 24px !important;
+    font-size: 35px;
   }
 
   body .container .nco .text-wrapper .text-3 {
     font-size: 12px;
   }
+}
 
-  body .container .nco form {
-    bottom: 9%;
+@media screen and (max-width: 380px) {
+  body .container .nco .text-wrapper .text-2 {
+    font-size: 16px;
+  }
+
+  body .container .nco .text-wrapper .text-2 span {
+    font-size: 25px;
   }
 }
 
@@ -568,7 +597,7 @@ body .rotate {
   }
 
   body .modal-content {
-    width: 40%;
+    width: 35%;
   }
 }
 
